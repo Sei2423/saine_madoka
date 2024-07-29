@@ -11,7 +11,7 @@ let t = 0;
 const opacity = 40;
 
 function draw() {
-  background(50, 35, 50);
+  background(45);
   noStroke()
   t += 0.01;
   for(let i = -100; i <= width; i += 100){
