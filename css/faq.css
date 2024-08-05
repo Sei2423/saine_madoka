@@ -1,0 +1,31 @@
+.question {
+    width: 80%;
+}
+
+.question::after {
+    content:""
+}
+
+.open {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    background-color: var(--subColor);
+    color: var(--mainColor);
+    position: relative;
+    font-size: 20px;
+}
+.open::before {
+    content: "▲";
+    position: absolute;
+    left: 6px;
+    top: -1px;
+}
+
+.opena::after {
+    content: "▼";
+    position: absolute;
+    left: 6px;
+    top: 1px;
+}
