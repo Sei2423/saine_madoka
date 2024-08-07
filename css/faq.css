@@ -1,9 +1,12 @@
-.question {
-    width: 80%;
+.FAQ_container {
+    box-sizing: border-box;
+    border: 1px white solid;
+    margin: 20px 0;
 }
 
-.question::after {
-    content:""
+.question {
+    display: flex;
+    margin: 20px 2%;
 }
 
 .open {
@@ -14,18 +17,49 @@
     background-color: var(--subColor);
     color: var(--mainColor);
     position: relative;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: auto;
+    overflow: hidden;
+    margin: auto;
 }
+
 .open::before {
     content: "▲";
     position: absolute;
-    left: 6px;
-    top: -1px;
+    left: 7px;
+    top: 0px;
+    transition: all 0.5s ease;
 }
 
-.opena::after {
+.open::after {
     content: "▼";
     position: absolute;
-    left: 6px;
-    top: 1px;
+    left: 7px;
+    top: 32px;
+    transition: all 0.5s ease;
+}
+
+input:not(:checked) + div.question > span.open::before {
+    left: 7px;
+    top: -30px;
+}
+input:not(:checked) + div.question > span.open::after {
+    left: 7px;
+    top: 2px;
+}
+
+.question_sentence {
+    width: calc(100% - 31px);
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.answer {
+    padding-left: calc(32px + 2%);
+    display: none;
+    margin-bottom: 20px;
+}
+
+.FAQ_container > label:has(input:checked + .question) + .answer {
+    display: block;
 }
