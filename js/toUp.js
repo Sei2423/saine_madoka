@@ -28,24 +28,29 @@ document.addEventListener('DOMContentLoaded', function() {
         right: 0;
         bottom: 0;
         opacity: 0;
+        padding: 3px 7px 2px 4px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        border: var(--charaColor) 2px solid;
     }
 
     #page_top img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transform: scale(1.5); /* 150%に拡大 */
         transform-origin: right; /* 中心を基準に拡大 */
     }
 
     #page_top.show {
       opacity: 1; 
     }
+    
     #page_top a{
       position: relative;
       display: block;
-      width: 50px;
-      height: 50px;
+      width: 100%;
+      height: 100%;
       text-decoration: none;
     }
     `;
