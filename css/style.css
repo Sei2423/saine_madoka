@@ -165,7 +165,7 @@ input {
 }
 
 
-.logo {
+.logo, .header-container > h1 > a:has(.logo) {
     height: 45px;
 }
 
