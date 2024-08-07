@@ -2,11 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const styleTag = document.createElement('style');
     const linkTag = document.createElement('link');
     const divTag = document.createElement('div');
+    const spanTag = document.createElement('span');
     const aTag = document.createElement('a');
     const imgTag = document.createElement('img');
 
-    linkTag.rel = "stylesheet";
-    linkTag.href = "https://use.fontawesome.com/releases/v5.6.4/css/all.css";
+    //linkTag.rel = "stylesheet";
+    //linkTag.href = "https://use.fontawesome.com/releases/v5.6.4/css/all.css";
 
     styleTag.textContent = `
     html{
@@ -22,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     #page_top {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         position: fixed;
         right: 0;
         bottom: 0;
@@ -45,6 +46,15 @@ document.addEventListener('DOMContentLoaded', function() {
     #page_top.show {
       opacity: 1; 
     }
+
+    #page_top span{
+      position: absolute;
+      color: var(--charaColor);
+      z-index: 1;
+      font-size: 12px;
+      left: 2.5px;
+      top: 1px;
+    }
     
     #page_top a{
       position: relative;
@@ -57,18 +67,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     divTag.id = 'page_top';
 
+    spanTag.innerHTML = 'TOP';
+    
     aTag.href = '#';
 
     imgTag.src = 'img/favicon.png';
 
     document.head.appendChild(styleTag);
     console.log("styleTag 追加", styleTag);
-    document.head.appendChild(linkTag);
-    console.log("linkTag 追加", linkTag);
+    //document.head.appendChild(linkTag);
+    //console.log("linkTag 追加", linkTag);
     aTag.appendChild(imgTag);
     console.log("imgTag 追加", imgTag);
     divTag.appendChild(aTag);
     console.log("aTag 追加", aTag);
+    divTag.appendChild(spanTag);
+    console.log("spanTag 追加", spanTag);
     document.body.appendChild(divTag);
     console.log("divTag 追加", divTag);
 
