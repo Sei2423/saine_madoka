@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     aTag.href = '#';
 
-    imgTag.src = '../img/favicon.png';
+    imgTag.src = 'img/favicon.png';
 
     document.head.appendChild(styleTag);
     console.log("styleTag 追加", styleTag);
