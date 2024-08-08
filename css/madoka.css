@@ -1,0 +1,45 @@
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.main-content {
+    overflow: visible;
+}
+
+.charactor {
+    margin: 0 -20px 0 -40px;
+}
+
+.charactor > img {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.profile > dl {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile > dl > dt {
+    width: 14em;
+}
+
+dd, dt {
+    width: 14em;
+    margin: 0;
+}
+
+@media screen and (max-width: 760px){
+    .container {
+        overflow: hidden;
+    }
+    
+    dd, dt {
+        font-size: 0.8em;
+        width: auto;
+    }
+}
