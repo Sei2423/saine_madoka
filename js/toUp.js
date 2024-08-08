@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
     #page_top {
         width: 60px;
         height: 60px;
-        position: fixed;
         right: 0;
         bottom: 0;
         opacity: 0;
@@ -34,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
         border-radius: 10px;
         overflow: hidden;
         border: var(--charaColor) 2px solid;
+        animation: 10s linear 0s infinite running updown, 13s linear 0s infinite running leftright;
+        position: fixed;
     }
 
     #page_top img {
@@ -62,6 +63,79 @@ document.addEventListener('DOMContentLoaded', function() {
       width: 100%;
       height: 100%;
       text-decoration: none;
+    }
+
+    @keyframes updown {
+        75% {
+            bottom: 0px;
+        }
+        0%, 50%, 100% {
+            bottom: 16px;
+        }
+        25% {
+            bottom: 32px;
+        }
+        5%, 45% {
+            bottom: 20.96px;
+        }
+        10%, 40% {
+            bottom: 25.439999999999998px;
+        }
+        15%, 35% {
+            bottom: 28.96px;
+        }
+        20%, 30% {
+            bottom: 31.2px;
+        }
+        55%, 95% {
+            bottom: 11.04px;
+        }
+        60%, 90% {
+            bottom: 6.5600000000000005px;
+        }
+        65%, 85% {
+            bottom: 3.039999999999999px;
+        }
+        70%, 80% {
+            bottom: 0.8000000000000007px;
+        }
+    }
+
+    
+    @keyframes leftright {
+        75% {
+            right: 6px;
+        }
+        0%, 50%, 100% {
+            right: 8px;
+        }
+        25% {
+            right: 10px;
+        }
+        5%, 45% {
+            right: 8.62px;
+        }
+        10%, 40% {
+            right: 9.18px;
+        }
+        15%, 35% {
+            right: 9.620000000000001px;
+        }
+        20%, 30% {
+            right: 9.9px;
+        }
+        55%, 95% {
+            right: 7.38px;
+        }
+        60%, 90% {
+            right: 6.82px;
+        }
+        65%, 85% {
+            right: 6.38px;
+        }
+        70%, 80% {
+            right: 6.1px;
+        }
     }
     `;
 
