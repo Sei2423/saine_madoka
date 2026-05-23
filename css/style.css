@@ -39,6 +39,11 @@ img {
     text-decoration-line: underline  !important;
 }
 
+.url {
+    color: #3e35b9 !important;
+    text-decoration-line: underline  !important;
+}
+
 body {
     margin: 0;
     padding: 0;
