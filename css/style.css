@@ -318,6 +318,10 @@ h3 {
     line-height: 2.8;
 }
 
+.right {
+	text-align: right;
+}
+
 @keyframes slidein{
     0% {
         transform: scale(0, 1);
