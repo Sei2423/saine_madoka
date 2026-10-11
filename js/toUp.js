@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     divTag.id = 'page_top';
 
-    spanTag.innerHTML = 'TOP';
+    spanTag.textContent = 'TOP';
     
     aTag.href = '#';
 
