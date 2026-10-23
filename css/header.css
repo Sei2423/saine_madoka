@@ -1,0 +1,111 @@
+/* ===== ヘッダー専用スタイル ===== */
+
+header {
+	background-color: white;
+	color: var(--mainColor);
+	padding: 5px 0;
+	height: 60px;
+	box-sizing: border-box;
+	text-align: center;
+	box-shadow: 0 0 10px #0001;
+}
+
+.header-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	justify-content: space-between;
+	padding: 0 16.9px;
+	box-sizing: border-box;
+}
+
+.header-container > h1 {
+	display: inline-flex;
+	margin-left: 2.2vw;
+}
+
+header nav.pc ul {
+	display: flex;
+	padding-left: 10px;
+}
+
+header :is(nav.pc, nav.sp > .infoContent) ul li:nth-child(1) {
+	color: var(--charaColor);
+}
+
+header :is(nav.pc, nav.sp > .infoContent) ul li {
+	list-style-type: none;
+	margin: 0 1.2vw;
+	font-weight: 700;
+}
+
+.sp {
+	position: absolute;
+	right: 20px;
+	top: 0;
+	z-index: 3;
+}
+
+.sp > label > span {
+	display: inline-block;
+	transform: translateY(-16px);
+	margin: 10px;
+	font-weight: bold;
+}
+
+.sp > label > svg {
+	height: 42px;
+	width: 34px;
+	margin: 9px 30px 0 0;
+}
+
+.sp label:has(+ #isHiddenInfo:checked) > svg {
+	transform: rotate(180deg);
+}
+
+.sp > .infoContent {
+	overflow-y: hidden;
+	position: absolute;
+	right: 20px;
+	top: 60px;
+	z-index: 3;
+	width: 12em;
+	height: 200px;
+}
+
+.sp > .infoContent > ul {
+	margin: 0;
+	padding: 16px 0 24px;
+	background-color: white;
+	position: relative;
+	top: -200px;
+}
+
+#isHiddenInfo:checked + .infoContent > ul {
+	top: 0;
+}
+
+nav.sp > .infoContent > ul > li {
+	list-style-type: none;
+	padding-top: 8px;
+}
+
+.sp {
+	display: none;
+}
+
+.logo,
+.header-container > h1 > a:has(.logo) {
+	height: 45px;
+}
+
+@media screen and (max-width: 760px) {
+	.sp {
+		display: block;
+	}
+
+	.pc {
+		display: none;
+	}
+}
